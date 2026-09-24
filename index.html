@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGadget ERP — Electronics Chain, Refurbishment & Repair Management</title>
+  <meta name="description" content="Enterprise-grade Multi-Branch Gadget Retail, IMEI Costing, Trade-In Valuation, Refurbishment Workshop, and Repair Ticketing Suite.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+
+  <!-- Top Navbar Root Container -->
+  <div id="navbar-root"></div>
+
+  <!-- Main Layout Shell -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Left Navigation Drawer / Sidebar Root -->
+    <div id="sidebar-root"></div>
+
+    <!-- Active View Main Content Area -->
+    <main class="flex-1 overflow-y-auto p-4 lg:p-7 custom-scroll relative">
+      <div class="max-w-7xl mx-auto" id="main-content-root">
+        <!-- Views dynamically injected here -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Global Modals Root -->
+  <div id="modals-container-root"></div>
+
+  <!-- Global Toast Notification Center -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ================= Application Scripts ================= -->
+  <!-- 1. Data Layer & Initial Seed -->
+  <script src="assets/js/data/mockData.js"></script>
+
+  <!-- 2. Reactive State Store -->
+  <script src="assets/js/store.js"></script>
+
+  <!-- 3. Shell Components -->
+  <script src="assets/js/components/navbar.js"></script>
+  <script src="assets/js/components/sidebar.js"></script>
+
+  <!-- 4. Core Scope View Components (1 to 11) -->
+  <script src="assets/js/components/dashboard.js"></script>
+  <script src="assets/js/components/branches.js"></script>
+  <script src="assets/js/components/inventory.js"></script>
+  <script src="assets/js/components/tradein.js"></script>
+  <script src="assets/js/components/refurb.js"></script>
+  <script src="assets/js/components/parts.js"></script>
+  <script src="assets/js/components/repairs.js"></script>
+  <script src="assets/js/components/sales.js"></script>
+  <script src="assets/js/components/aging.js"></script>
+  <script src="assets/js/components/reports.js"></script>
+  <script src="assets/js/components/modals.js"></script>
+
+  <!-- 5. App Initializer & Event Delegator -->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
